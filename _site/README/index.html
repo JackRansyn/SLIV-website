@@ -1,0 +1,30 @@
+<h1>SLIV — Eleventy-project</h1>
+<h2>Structuur</h2>
+<ul>
+<li><code>content/werkgroepen/*.md</code> — de 6 werkgroepen (elk bestand = 1 kaart op de homepage)</li>
+<li><code>content/nieuws/*.md</code> — nieuwsberichten, elk krijgt automatisch een eigen pagina</li>
+<li><code>_includes/base.njk</code> — hoofdlayout (header, footer, thema-toggle)</li>
+<li><code>_includes/nieuws-item.njk</code> — layout voor één nieuwsartikel</li>
+<li><code>index.njk</code> — de homepage, bouwt de secties op uit de collecties hierboven</li>
+<li><code>feed.njk</code> — genereert <code>/nieuws/feed.xml</code></li>
+<li><code>css/style.css</code>, <code>js/main.js</code> — ongewijzigd overgenomen uit het oorspronkelijke <code>sliv.html</code></li>
+</ul>
+<h2>Eerste keer opzetten</h2>
+<ol>
+<li>Zorg dat Node.js is geïnstalleerd (nodejs.org, LTS-versie).</li>
+<li>Open deze map in VS Code, open een terminal (Terminal → New Terminal).</li>
+<li>Installeer de dependencies:<pre><code>npm install
+</code></pre>
+</li>
+<li>Start de lokale preview:<pre><code>npm start
+</code></pre>
+Dit opent de site op <code>http://localhost:8080</code>. Wijzigingen in <code>.md</code>- of <code>.njk</code>-bestanden worden automatisch ververst.</li>
+</ol>
+<h2>Nieuw nieuwsbericht toevoegen (handmatig, zonder CMS)</h2>
+<p>Maak een nieuw bestand aan in <code>content/nieuws/</code>, bijvoorbeeld <code>2026-09-01-mijn-titel.md</code>, met dezelfde front matter (<code>title</code>, <code>date</code>, <code>excerpt</code>, <code>layout</code>, <code>permalink</code>) als de bestaande bestanden. Het verschijnt automatisch in de nieuwslijst én in de RSS-feed.</p>
+<h2>Bouwen voor productie</h2>
+<pre><code>npm run build
+</code></pre>
+<p>De kant-en-klare site komt in de map <code>_site</code> te staan — dit is wat je naar Netlify laat pushen.</p>
+<h2>Bekend aandachtspunt</h2>
+<p><code>feed.njk</code> gebruikt filters uit <code>@11ty/eleventy-plugin-rss</code> (<code>dateToRfc3339</code>, <code>getNewestCollectionItemDate</code>, <code>absoluteUrl</code>, <code>htmlToAbsoluteUrls</code>). Mocht <code>npm run build</code> hierop een foutmelding geven, stuur de foutmelding naar Claude — dat is in twee minuten te verhelpen.</p>

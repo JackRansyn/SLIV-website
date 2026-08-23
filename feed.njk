@@ -1,0 +1,26 @@
+---
+permalink: /nieuws/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.description }}</subtitle>
+  <link href="{{ metadata.url }}/nieuws/feed.xml" rel="self" />
+  <link href="{{ metadata.url }}/" />
+  <updated>{{ collections.nieuws | newestDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}/</id>
+  <author>
+    <name>{{ metadata.author }}</name>
+  </author>
+  {% for item in collections.nieuws.slice(0, 15) %}
+  <entry>
+    <title>{{ item.data.title }}</title>
+    <link href="{{ item.url | absoluteUrl(metadata.url) }}" />
+    <updated>{{ item.date | dateToRfc3339 }}</updated>
+    <id>{{ item.url | absoluteUrl(metadata.url) }}</id>
+    <content type="html">{{ item.templateContent | safe }}</content>
+    <summary>{{ item.data.excerpt }}</summary>
+  </entry>
+  {% endfor %}
+</feed>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SLIV — Samen Leven in Vrijheid</title>
+  <subtitle>Stichting SLIV zet zich in voor een vrije, open en democratische samenleving.</subtitle>
+  <link href="https://sliv.nl/nieuws/feed.xml" rel="self" />
+  <link href="https://sliv.nl/" />
+  <updated>2026-08-14T00:00:00.000Z</updated>
+  <id>https://sliv.nl/</id>
+  <author>
+    <name>Stichting SLIV</name>
+  </author>
+  
+  <entry>
+    <title>Werkgroep Energie publiceert notitie over netcapaciteit</title>
+    <link href="https://sliv.nl/nieuws/netcapaciteit/" />
+    <updated>2026-08-14T00:00:00.000Z</updated>
+    <id>https://sliv.nl/nieuws/netcapaciteit/</id>
+    <content type="html"><p>De werkgroep Energie heeft een notitie gepubliceerd over de toenemende druk op het Nederlandse elektriciteitsnet. De notitie brengt de belangrijkste knelpunten in kaart en doet concrete aanbevelingen voor zowel huishoudens als bedrijven.</p>
+<p>Vervang deze alinea's door de volledige tekst zodra die beschikbaar is.</p>
+</content>
+    <summary>Een overzicht van knelpunten in het elektriciteitsnet en concrete aanbevelingen voor huishoudens en bedrijven.</summary>
+  </entry>
+  
+  <entry>
+    <title>Publieke bijeenkomst: de toekomst van ons kiesstelsel</title>
+    <link href="https://sliv.nl/nieuws/kiesstelsel-bijeenkomst/" />
+    <updated>2026-07-02T00:00:00.000Z</updated>
+    <id>https://sliv.nl/nieuws/kiesstelsel-bijeenkomst/</id>
+    <content type="html"><p>Op deze bijeenkomst gingen deelnemers van de werkgroep Staatsinrichting in gesprek met genodigde sprekers over mogelijke aanpassingen van het Nederlandse kiesstelsel.</p>
+<p>Vervang deze alinea's door de volledige tekst zodra die beschikbaar is.</p>
+</content>
+    <summary>Terugblik op het debat tussen deelnemers van de werkgroep Staatsinrichting en genodigde sprekers.</summary>
+  </entry>
+  
+  <entry>
+    <title>SLIV lanceert dossier digitale privacy</title>
+    <link href="https://sliv.nl/nieuws/privacy-dossier/" />
+    <updated>2026-05-19T00:00:00.000Z</updated>
+    <id>https://sliv.nl/nieuws/privacy-dossier/</id>
+    <content type="html"><p>De werkgroep Vrijheid van Meningsuiting &amp; Privacy bundelt in dit dossier haar bevindingen over dataverzameling door overheid en bedrijfsleven, en de gevolgen daarvan voor burgers.</p>
+<p>Vervang deze alinea's door de volledige tekst zodra die beschikbaar is.</p>
+</content>
+    <summary>De werkgroep Vrijheid van Meningsuiting &amp; Privacy bundelt bevindingen over dataverzameling door overheid en bedrijfsleven.</summary>
+  </entry>
+  
+</feed>

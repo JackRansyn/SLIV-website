@@ -1,0 +1,122 @@
+---
+layout: base.njk
+title: "SLIV — Samen Leven in Vrijheid"
+permalink: /index.html
+---
+
+<!-- INTRO -->
+<section id="intro" class="hero" style="border-top:none;">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Stichting SLIV</div>
+      <h1>Samen leven <em>in vrijheid</em> begint bij het gesprek.</h1>
+      <p class="hero-lede">SLIV is een onafhankelijke stichting die zich inzet voor een vrije, open en democratische samenleving. We brengen burgers, deskundigen en beleidsmakers samen om maatschappelijke vraagstukken vanuit meerdere invalshoeken te onderzoeken — feitelijk, transparant en zonder aanzien des persoons.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#werkgroepen">Bekijk de werkgroepen</a>
+        <a class="btn btn-ghost" href="#contact">Word deelnemer</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="eyebrow">Waarom SLIV</div>
+      <p>Vrijheid is geen vanzelfsprekendheid maar een doorlopende opgave. SLIV organiseert onderzoek, dialoog en publieke bijeenkomsten rond de thema's die deze vrijheid vormgeven — van Europese samenwerking tot digitale privacy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WERKGROEPEN -->
+<section id="werkgroepen">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Zes pijlers</div>
+        <h2>De werkgroepen van SLIV</h2>
+      </div>
+      <p class="desc">Elke werkgroep verdiept zich in één domein, verzamelt kennis en formuleert standpunten die worden voorgelegd aan het bestuur en de achterban.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="articles" id="articleGrid">
+      {% for wg in collections.werkgroepen %}
+      <div class="article-card">
+        <div class="article-num"><span class="roman">{{ wg.data.romeins }}</span><span class="tag">{{ wg.data.tag }}</span></div>
+        <h3>{{ wg.data.title }}</h3>
+        {{ wg.templateContent | safe }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- NIEUWS -->
+<section id="nieuws">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Actueel</div>
+        <h2>Nieuws vanuit SLIV</h2>
+      </div>
+      <p class="desc">Updates over onderzoek, bijeenkomsten en standpunten van de stichting en haar werkgroepen.</p>
+    </div>
+
+    <div class="news-list">
+      {% for item in collections.nieuws.slice(0, 5) %}
+      <a class="news-item" href="{{ item.url }}">
+        <span class="news-date">{{ item.date | dutchDate }}</span>
+        <div>
+          <h3>{{ item.data.title }}</h3>
+          <p>{{ item.data.excerpt }}</p>
+        </div>
+        <span class="news-arrow">→</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">In gesprek</div>
+        <h2>Neem contact op</h2>
+      </div>
+      <p class="desc">Vragen, ideeën of interesse om deel te nemen aan een werkgroep? We horen graag van u.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p style="color:var(--text-muted); max-width:34ch;">Stichting SLIV is aangesloten bij geen enkele politieke partij en werkt op basis van vrijwillige bijdragen van deelnemers en donateurs.</p>
+        <dl>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:info@sliv.nl">info@sliv.nl</a></dd>
+          <dt>Kamer van Koophandel</dt>
+          <dd>KvK 00000000</dd>
+          <dt>Locatie</dt>
+          <dd>Nederland</dd>
+        </dl>
+      </div>
+
+      <form id="contactForm">
+        <div class="field">
+          <label for="naam">Naam</label>
+          <input id="naam" name="naam" type="text" placeholder="Uw volledige naam" required>
+        </div>
+        <div class="field">
+          <label for="email">E-mailadres</label>
+          <input id="email" name="email" type="email" placeholder="naam@voorbeeld.nl" required>
+        </div>
+        <div class="field">
+          <label for="werkgroep">Werkgroep (optioneel)</label>
+          <input id="werkgroep" name="werkgroep" type="text" placeholder="Bijv. Energie of Staatsinrichting">
+        </div>
+        <div class="field">
+          <label for="bericht">Bericht</label>
+          <textarea id="bericht" name="bericht" placeholder="Waar gaat uw bericht over?" required></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Bericht versturen</button>
+        <p class="form-note">Dit is een statisch formulier zonder verzendfunctie — koppel het aan uw eigen backend of e-maildienst.</p>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+---
+layout: base.njk
+---
+<article class="wrap article-page">
+  <p class="eyebrow">Nieuws</p>
+  <h1>{{ title }}</h1>
+  <p class="article-date">{{ date | dutchDate }}</p>
+  <div class="article-body">
+    {{ content | safe }}
+  </div>
+  <a class="back-link" href="/#nieuws">← Terug naar overzicht</a>
+</article>
