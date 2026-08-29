@@ -3,7 +3,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
-
+  eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy({ "images": "images" });
   // Datumnotatie zoals "14 aug 2026"
   eleventyConfig.addFilter("dutchDate", (dateObj) => {
     const maanden = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"];
